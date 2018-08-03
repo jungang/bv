@@ -17,7 +17,7 @@ var options = {
     versionToTag: 'package.json',
     bumpType: 'patch',
     commitMessage: 'bump package version'
-}
+};
 
 /**
  * Bumping version number.

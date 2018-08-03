@@ -1,6 +1,6 @@
 {
   "name": "gulp-git-push",
-  "version": "2.0.28",
+  "version": "2.0.29",
   "description": "Pushes local changes to remote repository",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,6 @@
     "bump_version_minor_0.1.0": "gulp release --type=minor",
     "bump_version_major_1.0.0": "gulp release --type=major",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ferreiratiago/gulp-git-push.git"
   },
   "author": "Tiago Ferreira",
   "license": "ISC",
@@ -29,5 +25,13 @@
     "gulp-git": "^2.5.2",
     "gulp-tag-version": "^1.3.0",
     "yargs": "^4.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jungang/bumpVersion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jungang/bumpVersion/issues"
+  },
+  "homepage": "https://github.com/jungang/bumpVersion#readme"
 }
