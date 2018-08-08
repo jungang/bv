@@ -33,15 +33,16 @@ let isValid = function(s) {
 			// stackLeft[stackLeft.length-1]   堆栈中的顶端符号
 			if(stackLeft[stackLeft.length-1] === strLeft[leftIndex]){   //判断是否对应
 				stackLeft.pop()
+			}else {
+				err = true;
 			}
 		}
 	});
-	console.log('err:', err);
-	
-	return err || !stackLeft.length
+	return (err)? !err :  !stackLeft.length
 };
 
-console.log(isValid("]"));
+console.log(isValid("(])"));
+// console.log(isValid("]"));
 // console.log(isValid("()[]{}"));
 // console.log(isValid("()"));
 // console.log(isValid("([)]"));
