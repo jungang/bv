@@ -53,5 +53,8 @@ function sand() {
   let per = (mds.slice(-2));
   let rd = Math.random()*100;
 
+  console.log('概率:', per);
+  console.log('命中:', rd);
+
   return rd < per
 }
