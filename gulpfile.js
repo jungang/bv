@@ -29,11 +29,18 @@ var options = {
  *     gulp release --type=major    # makes v0.2.1 → v1.0.0
  */
 gulp.task('release', function () {
+
+  if(0){
+    return ''
+  }else {
     return gulp.src(options.versionToBump)
-        .pipe(bump({type: argv.type || options.bumpType}))
-        .pipe(gulp.dest(options.dest))
-        .pipe(git.commit(options.commitMessage))
-        .pipe(filter(options.versionToTag))
-        .pipe(tag())
-        .pipe(push());
+      .pipe(bump({type: argv.type || options.bumpType}))
+      .pipe(gulp.dest(options.dest))
+      .pipe(git.commit(options.commitMessage))
+      .pipe(filter(options.versionToTag))
+      .pipe(tag())
+      .pipe(push());
+  }
+
+
 });
