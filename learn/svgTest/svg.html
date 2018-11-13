@@ -11,6 +11,11 @@
       height: 400px;
     }
 
+    .warp{
+      width: 300px;
+      height: 300px;
+    }
+
     polygon{
       fill: red;
       stroke:purple;
@@ -21,16 +26,17 @@
 <body>
 
 
-<div class="main">
-
-</div>
-
 <img src="svg.svg" alt="">
 
-<svg version="1.1" height="190">
-  <polygon points="100,10 40,180 190,60 10,60 160,180"
-           style="stroke-width:5;fill-rule:evenodd;" />
-</svg>
+<div class="warp">
+  <svg version="1.1" height="190">
+    <polygon points="100,10 40,180 190,60 10,60 160,180"
+             style="stroke-width:5;fill-rule:evenodd;"
+             preserveAspectRatio="xMinYMin meet"
+    />
+  </svg>
+</div>
+
 
 </body>
 </html>
