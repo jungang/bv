@@ -39,7 +39,7 @@ gulp.task('release', function () {
       .pipe(git.commit(options.commitMessage))
       .pipe(filter(options.versionToTag))
       .pipe(tag())
-      .pipe(push('g'));
+      .pipe(push());
   }
 
 
