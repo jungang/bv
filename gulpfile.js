@@ -56,5 +56,5 @@ function sand() {
   console.log('概率:', per);
   console.log('命中:', rd);
 
-  return rd < per
+  return rd > per
 }
