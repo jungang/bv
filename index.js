@@ -16,9 +16,7 @@ module.exports = function (options) {
         refspec: 'HEAD',
         options: { args: '--follow-tags' }
     };
-
     objectAssign(opt, options);
-
     function modifyContents(file, cb) {
         if (file && file.isNull()) {
             return cb(null, file);
@@ -26,7 +24,6 @@ module.exports = function (options) {
         if (file && file.isStream()) {
             return cb(new Error('Streams not supported'), file);
         }
-
         git.push(opt.repository, opt.refspec, opt.options, function endHandler(error) {
             if (error) {
                 return cb(new Error(error), file);
