@@ -23,7 +23,6 @@ module.exports = function (options) {
         if (file && file.isNull()) {
             return cb(null, file);
         }
-
         if (file && file.isStream()) {
             return cb(new Error('Streams not supported'), file);
         }
@@ -33,11 +32,9 @@ module.exports = function (options) {
                 return cb(new Error(error), file);
             }
             gutil.log(gutil.colors.green('Changes pushed to remote'));
-
             return cb(null, file);
         });
     }
-
     return map(modifyContents);
 };
 
