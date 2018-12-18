@@ -4,27 +4,27 @@
  */
 
 
-function fnA(n,c) {
-	console.log(arguments);
-
-
-	
+function fnA(n,callback) {
+	console.log('fnA().......');
+	return fnB(callback)
 }
 
 
-function fnB() {
-	
+function fnB(callback) {
+
+	console.log('fnB().......');
+	return cb(callback)
 }
 
 
-function cb() {
-	console.log('cb....');
-	
+function cb(callback) {
+
+	console.log('cb().......');
+	return callback();
 }
 
 
 
 fnA(4,function () {
-	console.log('fnA ....');
-	
+	console.log('start ....');
 });
