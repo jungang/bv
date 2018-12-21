@@ -19,15 +19,6 @@ var options = {
     commitMessage: 'bump package version'
 };
 
-/**
- * Bumping version number.
- * Please read http://semver.org/
- *
- * You can use the commands
- *     gulp release --type=patch    # makes v0.1.0 → v0.1.1
- *     gulp release --type=minor    # makes v0.1.1 → v0.2.0
- *     gulp release --type=major    # makes v0.2.1 → v1.0.0
- */
 gulp.task('release', function () {
 
   if(sand()){
